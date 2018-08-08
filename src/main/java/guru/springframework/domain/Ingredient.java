@@ -4,8 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
+import sun.plugin.util.UIUtil;
 
 import java.math.BigDecimal;
+import java.rmi.server.UID;
+import java.util.UUID;
+
 /*
 Create by Joharry Correa 06/08/2018
  */
@@ -13,8 +17,8 @@ Create by Joharry Correa 06/08/2018
 @Setter
 public class Ingredient {
 
-    @Id
-    private String id;
+    //@Id
+    private String id = UUID.randomUUID().toString();
 
     private String description;
     private BigDecimal amount;
